@@ -10,13 +10,13 @@ import {
 } from "firebase/firestore";
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyC95qBVUMb-fz12rFqyLFlX0owRNwR7NDs",
-  authDomain: "family-tree-org.firebaseapp.com",
-  projectId: "family-tree-org",
-  storageBucket: "family-tree-org.firebasestorage.app",
-  messagingSenderId: "1029563830388",
-  appId: "1:1029563830388:web:3e57120cf0f50e218a8121",
-  measurementId: "G-WZBTDYPFS8",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY || "AIzaSyC95qBVUMb-fz12rFqyLFlX0owRNwR7NDs",
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN || "family-tree-org.firebaseapp.com",
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID || "family-tree-org",
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET || "family-tree-org.firebasestorage.app",
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID || "1029563830388",
+  appId: import.meta.env.VITE_FIREBASE_APP_ID || "1:1029563830388:web:3e57120cf0f50e218a8121",
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID || "G-WZBTDYPFS8",
 };
 
 // Safe singleton initialization
